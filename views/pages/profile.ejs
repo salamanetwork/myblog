@@ -1,0 +1,33 @@
+<%- include ../partials/header %>
+
+  <div class="container">
+
+    <div class="row justify-content-center">
+
+
+      <div class="card" style="width: 22rem;">
+        <img class="card-img-top" src="https://picsum.photos/200/200/?random" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title"><%- rows[0].user_full_name; %></h5>
+          <p class="card-text"><%- rows[0].user_description; %></p>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">Username: <%- rows[0].user_name; %></li>
+          <li class="list-group-item">Email: <%- rows[0].user_email; %></li>
+          <li class="list-group-item">Joined Date: <%- rows[0].user_joined_date; %></li>
+          <li class="list-group-item">Posts: <%= countOfPosts; %></li>
+        </ul>
+        <div class="card-body text-center">
+          <a href="#" class="card-link"><i class="fab fa-3x fa-facebook"></i></a>
+          <a href="#" class="card-link"><i class="fab fa-3x fa-twitter"></i></a>
+          <a href="#" class="card-link"><i class="fab fa-3x fa-google-plus"></i></a>
+        </div>
+      </div>
+
+
+
+    </div>
+  </div>
+
+
+  <%- include ../partials/footer %>

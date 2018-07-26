@@ -1,0 +1,33 @@
+{
+  "name": "myblog",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.18.3",
+    "bootstrap": "^4.1.2",
+    "cookie-parser": "^1.4.3",
+    "csurf": "^1.9.0",
+    "date-now": "^1.0.1",
+    "date-time": "^2.1.0",
+    "ejs": "^2.6.1",
+    "express": "^4.16.3",
+    "express-myconnection": "^1.0.4",
+    "forms": "^1.3.0",
+    "knex": "^0.15.2",
+    "lodash": "^4.17.10",
+    "mysql": "^2.16.0",
+    "o-clock": "^0.1.2",
+    "pg": "^7.4.3",
+    "tachyons": "^4.10.0",
+    "time-stamp": "^2.0.0",
+    "underscore": "^1.9.1",
+    "xtend": "^4.0.1"
+  }
+}

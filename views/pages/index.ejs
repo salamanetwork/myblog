@@ -1,0 +1,40 @@
+<%- include ../partials/header %>
+
+  <div class="container">
+
+    <div class="row m-auto">
+
+
+
+
+      <% rows.forEach(function(row) { %>
+        <div class="card mt-1 ml-1 mr-auto mb-3" style="width: 30rem; height: auto;">
+          <img class="card-img-top" src="https://picsum.photos/362/200/?random" alt="Card image cap">
+          <div class="card-body">
+          <% if(USER_LOGGED) { %>
+            <% if(USER_ID === row.user_id) { %>
+                <h5 class="card-title"><%- row.post_title; %> (<%- '<a href="/post/edit/' + row.post_id + '">' %> Edit </a>)</h5>
+              <% } else { %>
+                <h5 class="card-title"><%- row.post_title; %></h5>
+              <% } %>
+          <% } else { %>
+            <h5 class="card-title"><%= row.post_title; %></h5>
+          <% } %>
+
+            <p class="card-text">
+              <%- row.post_text.replace(/\n|\r\n|\r/g, '<br/>'); %></p>
+          </div>
+          <div class="card-footer d-flex justify-content-between">
+            <small class="text-muted">
+            <span>By: </span><%- " ( " + '<a class="text-danger" href="/profile/' + row.user_id + '">' + row.user_name + '</a>' + " ) " %>
+            </small>
+            <small class="text-muted"><span>Last Update: </span><%= row.post_date; %></small>
+          </div>
+        </div>
+        <% })  %>
+
+    </div>
+  </div>
+
+
+  <%- include ../partials/footer %>

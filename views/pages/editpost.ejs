@@ -1,0 +1,33 @@
+<%- include ../partials/header %>
+
+<div class="container">
+
+  <div class="row justify-content-center">
+
+
+    <form method="post" action="/post/edit" class="form mt-5" enctype="application/x-www-form-urlencoded">
+      <input type="hidden" name="postID" value="<%- rows[0].post_id %>">
+
+      <div class="form-group row">
+        <label for="inputPostTitle">Post Title</label>
+        <input type="text" class="form-control" id="inputPostTitle" placeholder="Enter Your  Post Title" name="postTitle" value="<%- rows[0].post_title %>">
+      </div>
+
+      <div class="form-group row">
+        <label for="inputUsername">Post Text</label>
+        <textarea class="form-control" id="inputPostText" name="postText" cols="100" rows="20"><%- rows[0].post_text %></textarea>
+      </div>
+
+      <div class="form-group row justify-content-end">
+        <button type="submit" class="btn btn-primary">Post</button>
+      </div>
+
+    </form>
+
+
+
+  </div>
+</div>
+
+
+<%- include ../partials/footer %>

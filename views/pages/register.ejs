@@ -1,0 +1,49 @@
+<%- include ../partials/header %>
+
+  <div class="container">
+
+    <div class="row justify-content-center">
+
+      <form method="post" action="/register" class="form mt-5" enctype="application/x-www-form-urlencoded">
+
+        <div class="form-group row">
+          <label for="inputFullName">Full Name</label>
+          <input type="text" class="form-control" id="inputFullName" placeholder="Enter your full name" name="fullname" required>
+        </div>
+
+        <div class="form-group row">
+          <label for="inputUsername">Username</label>
+          <input type="text" class="form-control" id="inputUsername" placeholder="Enter your username" name="username" required>
+        </div>
+
+        <div class="form-group row">
+          <label for="inputUsername">Email</label>
+          <input type="text" class="form-control" id="inputEmail" placeholder="Enter your email" name="email" required>
+        </div>
+
+        <div class="form-group row">
+          <label for="inputPassword">Password</label>
+          <input type="password" class="form-control" id="inputPassword" placeholder="Password" name="password" required>
+        </div>
+        <div class="form-group row">
+          <label for="inputRePassword">Re-type Password</label>
+          <input type="password" class="form-control" id="inputRePassword" placeholder="Re-type Password" name="retypepassword" required>
+        </div>
+
+        <div class="form-group row">
+          <label for="inputDescription">Description</label>
+          <textarea class="form-control" id="inputDescription" placeholder="Enter your description" name="description" rows="8" required></textarea>
+        </div>
+
+        <div class="form-group row justify-content-end">
+          <button type="submit" class="btn btn-primary">Register</button>
+        </div>
+    </form>
+
+  </div>
+  </div>
+
+
+  <script src="/public/js/register.js" charset="utf-8"></script>
+
+  <%- include ../partials/footer %>
